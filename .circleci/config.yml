@@ -23,8 +23,10 @@ jobs:
       - run:
           name: "Say hello"
           command: "npm test"
+      - run:
+          command: "mkdir -p reports"
       - store_test_results:
-          path: mochawesome-report
+          path: /reports
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
