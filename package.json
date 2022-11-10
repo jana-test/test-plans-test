@@ -1,0 +1,23 @@
+{
+    "name": "test-plan-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/JanaDj/test-plan-test.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/JanaDj/test-plan-test/issues"
+    },
+    "homepage": "https://github.com/JanaDj/test-plan-test#readme",
+    "dependencies": {
+      "selenium-webdriver": "^4.6.0"
+    }
+  }
+  
