@@ -1,6 +1,9 @@
 const {Builder, By, Key, until} = require('selenium-webdriver');
 (async function example() {
-let driver = await new Builder().forBrowser("chrome").build();
+const chrome = require('selenium-webdriver/chrome')
+const options = new chrome.Options()
+options.addArguments("headless");
+let driver = await new Builder().forBrowser("chrome").setChromeOptions(options).build();
 try {
 await driver.get('http://www.google.com/ncr');
 await driver.findElement(By.name('q')).sendKeys('You did it!!', Key.RETURN);
