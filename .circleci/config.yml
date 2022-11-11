@@ -21,12 +21,12 @@ jobs:
       - browser-tools/install-chromedriver
       - run: npm install
       - run:
-          name: "Say hello"
+          name: "Run tests"
           command: "npm test"
       - run:
-          command: "mkdir -p reports"
-      - store_test_results:
-          path: mochawesome-report
+          name: "Push test results"
+          command: "npm run send-report"
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
