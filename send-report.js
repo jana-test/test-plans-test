@@ -4,7 +4,7 @@ const fs = require("fs");
 // auth options:
 const baseUrl = "https://jana12.testrail.io/index.php?";
 const username = "jana.djordjevic.bg@gmail.com";
-const password = "";
+const password = "zCxvx5sbash5EQPrgVFS";
 const projectId = 2;
 
 const readTestResultsJson = () => {
