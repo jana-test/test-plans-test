@@ -56,10 +56,8 @@ const postResults = async () => {
      */
   const testResultsTests = readTestResultsJson();
   const resultsData = [];
-//   console.log('tests je: ', testResultsTests)
   testResultsTests.forEach((test) => {
     const testId = test.title.split("#")[0].trim();
-    // console.log('test id je: ', getTestId(testRailTests, testId.substring(1)).id)
     resultsData.push({
       test_id: getTestId(testRailTests, testId.substring(1)),
       status_id: test.pass ? 1 : 5,
@@ -67,7 +65,6 @@ const postResults = async () => {
   });
 
   // post results
-//   console.log("results bodu je: ", resultsData)
   const results = await axios({
     method: "post",
     url: `${baseUrl}/api/v2/add_results/${runId}`,
